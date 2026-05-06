@@ -1,0 +1,17 @@
+{
+  "name": "Kavandra Pizzéria & Étterem",
+  "short_name": "Kavandra",
+  "description": "Telepíthető online rendelési webapp a Kavandra Pizzéria & Étterem számára.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fffc",
+  "theme_color": "#dcfff0",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
