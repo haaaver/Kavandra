@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
-import { ArrowRight, Clock, Flame, MapPin, ShieldCheck, ShoppingBag, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Clock, Flame, MapPin, ShieldCheck, ShoppingBag, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { AuthPanel } from "@/components/AuthPanel";
 import { Button } from "@/components/Button";
@@ -13,21 +13,6 @@ import { OrdersPanel } from "@/components/OrdersPanel";
 import { categories, formatPrice, menuItems } from "@/lib/menu";
 import { featuredItems, useStore } from "@/lib/store";
 import { menuImage } from "@/lib/visuals";
-
-const testimonials = [
-  {
-    name: "Réka",
-    text: "A Parma pizzában minden falat tiszta olasz hangulat. A rendeléskövetés külön jó pont."
-  },
-  {
-    name: "Máté",
-    text: "Letisztult, gyors, a kosár végig szem előtt van. Pont ilyen online étlap kell egy jó pizzériának."
-  },
-  {
-    name: "Nóra",
-    text: "A tiramisu és a jeges kávé kombó veszélyesen jól működik."
-  }
-];
 
 const faqs = [
   {
@@ -181,18 +166,6 @@ export function HomeApp() {
       <section className="mx-auto grid max-w-7xl gap-6 px-4 py-14 md:grid-cols-[1fr_360px] md:px-8">
         <OrdersPanel />
         <AuthPanel />
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 py-14 md:px-8">
-        <div className="grid gap-5 md:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <article className="glass scroll-reveal rounded-2xl p-5" key={testimonial.name}>
-              <Star className="h-5 w-5 fill-basil text-basil" />
-              <p className="mt-4 text-sm leading-6 text-ink/68">{testimonial.text}</p>
-              <p className="mt-5 font-black">{testimonial.name}</p>
-            </article>
-          ))}
-        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-14 md:px-8">
