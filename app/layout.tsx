@@ -7,9 +7,14 @@ export const metadata: Metadata = {
   title: "A PLACC Pizza Pasta & Grill",
   description: "Online rendelési felület az A PLACC Pizza Pasta & Grill számára.",
   manifest: "/manifest.json",
+  icons: {
+    icon: "/icon-192.png",
+    apple: "/icon-192.png"
+  },
   appleWebApp: {
     capable: true,
-    title: "A PLACC"
+    title: "A PLACC",
+    statusBarStyle: "default"
   }
 };
 
