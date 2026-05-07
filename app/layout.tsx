@@ -4,12 +4,12 @@ import { PwaRegister } from "@/components/PwaRegister";
 import { StoreProvider } from "@/lib/store";
 
 export const metadata: Metadata = {
-  title: "Kavandra Pizzéria & Étterem",
-  description: "Modern online rendelési felület a Kavandra Pizzéria & Étterem számára.",
+  title: "A PLACC Pizza Pasta & Grill",
+  description: "Online rendelési felület az A PLACC Pizza Pasta & Grill számára.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    title: "Kavandra"
+    title: "A PLACC"
   }
 };
 

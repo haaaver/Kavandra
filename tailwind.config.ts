@@ -9,25 +9,25 @@ const config: Config = {
       },
       colors: {
         mint: {
-          50: "#f1fff9",
-          100: "#dcfff0",
-          200: "#b8fadd",
-          300: "#7ef0c0",
-          400: "#37dfa0",
-          500: "#12c789",
-          600: "#08a56f",
-          700: "#0a845c",
-          800: "#0d684c",
-          900: "#0f5641"
+          50: "rgba(255, 228, 230, 0.10)",
+          100: "rgba(255, 228, 230, 0.18)",
+          200: "rgba(254, 205, 211, 0.28)",
+          300: "#fda4af",
+          400: "#fb7185",
+          500: "#f43f5e",
+          600: "#e11d48",
+          700: "#be123c",
+          800: "#9f1239",
+          900: "#881337"
         },
-        ink: "#13211d",
-        basil: "#1d6b54",
-        tomato: "#d95032",
-        cream: "#fffaf1"
+        ink: "#f8fafc",
+        basil: "#fb7185",
+        tomato: "#f43f5e",
+        cream: "#111217"
       },
       boxShadow: {
-        glass: "0 24px 80px rgba(13, 104, 76, 0.16)",
-        lift: "0 18px 50px rgba(19, 33, 29, 0.12)"
+        glass: "0 24px 80px rgba(0, 0, 0, 0.42)",
+        lift: "0 18px 50px rgba(225, 29, 72, 0.24)"
       },
       borderRadius: {
         button: "14px"

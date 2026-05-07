@@ -1,4 +1,4 @@
-# Kavandra Pizzéria & Étterem Webapp
+# A PLACC Pizza Pasta & Grill Webapp
 
 Modern SaaS + glassmorphism stílusú, Next.js App Router alapú rendelési webapp.
 

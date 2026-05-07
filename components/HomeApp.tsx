@@ -61,16 +61,16 @@ export function HomeApp() {
 
   return (
     <main className="pb-28 md:pb-0">
-      <header className="sticky top-0 z-30 border-b border-white/50 bg-white/60 backdrop-blur-2xl">
+      <header className="sticky top-0 z-30 border-b border-white/10 bg-black/55 backdrop-blur-2xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
           <a href="#" className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-ink text-lg font-black text-white">K</span>
+            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-rose-600 text-lg font-black text-white shadow-lift">A</span>
             <span>
-              <span className="block text-base font-black">Kavandra</span>
-              <span className="block text-xs font-bold text-basil">Pizzéria & Étterem</span>
+              <span className="block text-base font-black">A PLACC</span>
+              <span className="block text-xs font-bold text-basil">Pizza Pasta & Grill</span>
             </span>
           </a>
-          <nav className="hidden items-center gap-6 text-sm font-bold text-ink/70 md:flex">
+          <nav className="hidden items-center gap-6 text-sm font-bold text-ink/70 md:flex [&_a]:transition [&_a:hover]:text-rose-300">
             <a href="#menu">Menü</a>
             <a href="#specials">Különlegességek</a>
             <a href="#orders">Rendelések</a>
@@ -86,15 +86,15 @@ export function HomeApp() {
 
       <section className="relative mx-auto grid min-h-[calc(100vh-72px)] max-w-7xl items-center gap-10 px-4 py-10 md:grid-cols-[1.08fr_0.92fr] md:px-8">
         <div>
-          <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-black text-basil shadow">
+          <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 rounded-full border border-rose-300/25 bg-white/10 px-4 py-2 text-sm font-black text-basil shadow-glass backdrop-blur-xl">
             <Sparkles className="h-4 w-4" />
             Pizza. Kemence. Szeretet.
           </motion.p>
           <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }} className="mt-6 max-w-4xl text-5xl font-black leading-[1.02] text-ink text-balance md:text-7xl">
-            Kavandra Pizzéria & Étterem
+            A PLACC Pizza Pasta & Grill
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.16 }} className="mt-6 max-w-2xl text-lg leading-8 text-ink/68">
-            Mi nem bonyolítjuk túl: nálunk a nápolyi pizza pont olyan, amilyennek lennie kell. Friss alapanyagok, forró kemence, olasz vibe – és egy csipet Szerencs. Ugorj be, kóstolj bele, aztán meséld el a barátaidnak is! 🍕
+            A PLACC-ban a jó ízek és a kellemes hangulat találkoznak. Látványkemencében sült nápolyi stílusú pizzáink, friss tésztáink, kézműves hamburgereink és étlapunk különleges elemei minden alkalomra tökéletes választás.
           </motion.p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button onClick={() => document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" })}>
@@ -126,7 +126,7 @@ export function HomeApp() {
                 <p className="text-sm font-bold text-basil">Mai ajánlat</p>
                 <h2 className="text-2xl font-black">{heroItem.name}</h2>
               </div>
-              <span className="rounded-full bg-white px-4 py-2 text-sm font-black">{formatPrice(heroItem.price)}</span>
+              <span className="rounded-full bg-white/10 px-4 py-2 text-sm font-black ring-1 ring-white/15">{formatPrice(heroItem.price)}</span>
             </div>
             <p className="mt-3 text-sm leading-6 text-ink/65">{heroItem.description}</p>
           </div>
@@ -144,7 +144,7 @@ export function HomeApp() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`whitespace-nowrap rounded-button px-4 py-2 text-sm font-black transition ${activeCategory === category ? "bg-ink text-white" : "text-ink/60 hover:bg-white"}`}
+                className={`whitespace-nowrap rounded-button px-4 py-2 text-sm font-black transition ${activeCategory === category ? "bg-rose-600 text-white shadow-lift" : "text-ink/60 hover:bg-white/10 hover:text-rose-200"}`}
               >
                 {category}
               </button>
@@ -161,7 +161,7 @@ export function HomeApp() {
       <section className="mx-auto max-w-7xl px-4 py-14 md:px-8" id="specials">
         <div className="mb-7">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-basil">Különlegességek</p>
-          <h2 className="mt-2 text-4xl font-black">Kavandra kedvencek</h2>
+          <h2 className="mt-2 text-4xl font-black">A PLACC kedvencek</h2>
         </div>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {featuredItems.slice(0, 4).map((item) => (
@@ -208,9 +208,9 @@ export function HomeApp() {
         </div>
       </section>
 
-      <footer className="border-t border-white/60 px-4 py-10 md:px-8">
+      <footer className="border-t border-white/10 px-4 py-10 md:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-ink/60 md:flex-row md:items-center md:justify-between">
-          <p className="font-black text-ink">Kavandra Pizzéria & Étterem</p>
+          <p className="font-black text-ink">A PLACC Pizza Pasta & Grill</p>
           <p>Classico, Gourmet, Signature · PWA telepíthető webapp · Vercel ready</p>
         </div>
       </footer>

@@ -44,22 +44,22 @@ export function AuthPanel() {
 
   return (
     <form className="glass rounded-2xl p-5" id="profile" onSubmit={submit}>
-      <div className="mb-4 flex rounded-button bg-mint-50 p-1">
-        <button type="button" onClick={() => setMode("login")} className={`flex-1 rounded-xl px-3 py-2 text-sm font-black ${mode === "login" ? "bg-white shadow" : "text-ink/55"}`}>
+      <div className="mb-4 flex rounded-button bg-white/5 p-1 ring-1 ring-white/10">
+        <button type="button" onClick={() => setMode("login")} className={`flex-1 rounded-xl px-3 py-2 text-sm font-black transition ${mode === "login" ? "bg-rose-600 text-white shadow-lift" : "text-ink/55 hover:bg-white/10 hover:text-rose-200"}`}>
           Bejelentkezés
         </button>
-        <button type="button" onClick={() => setMode("register")} className={`flex-1 rounded-xl px-3 py-2 text-sm font-black ${mode === "register" ? "bg-white shadow" : "text-ink/55"}`}>
+        <button type="button" onClick={() => setMode("register")} className={`flex-1 rounded-xl px-3 py-2 text-sm font-black transition ${mode === "register" ? "bg-rose-600 text-white shadow-lift" : "text-ink/55 hover:bg-white/10 hover:text-rose-200"}`}>
           Regisztráció
         </button>
       </div>
       <div className="grid gap-3">
         {mode === "register" && (
-          <input className="rounded-button border border-mint-100 bg-white/80 px-4 py-3 outline-none focus:border-basil" placeholder="Név" value={name} onChange={(event) => setName(event.target.value)} />
+          <input className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Név" value={name} onChange={(event) => setName(event.target.value)} />
         )}
-        <input required type="email" className="rounded-button border border-mint-100 bg-white/80 px-4 py-3 outline-none focus:border-basil" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)} />
-        <input required minLength={6} type="password" className="rounded-button border border-mint-100 bg-white/80 px-4 py-3 outline-none focus:border-basil" placeholder="Jelszó" value={password} onChange={(event) => setPassword(event.target.value)} />
+        <input required type="email" className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)} />
+        <input required minLength={6} type="password" className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Jelszó" value={password} onChange={(event) => setPassword(event.target.value)} />
       </div>
-      {error && <p className="mt-3 rounded-button bg-red-50 p-3 text-sm font-bold text-red-700">{error}</p>}
+      {error && <p className="mt-3 rounded-button bg-rose-500/15 p-3 text-sm font-bold text-rose-200 ring-1 ring-rose-400/25">{error}</p>}
       <Button className="mt-4 w-full">
         {mode === "register" ? <UserPlus className="h-4 w-4" /> : <LogIn className="h-4 w-4" />}
         {mode === "register" ? "Fiók létrehozása" : "Belépés"}

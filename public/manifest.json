@@ -1,7 +1,7 @@
 {
-  "name": "Kavandra Pizzéria & Étterem",
-  "short_name": "Kavandra",
-  "description": "Telepíthető online rendelési webapp a Kavandra Pizzéria & Étterem számára.",
+  "name": "A PLACC Pizza Pasta & Grill",
+  "short_name": "A PLACC",
+  "description": "Telepíthető online rendelési webapp az A PLACC Pizza Pasta & Grill számára.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f8fffc",

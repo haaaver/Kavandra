@@ -27,10 +27,10 @@ export function OrdersPanel() {
                   <h3 className="font-black">{order.id}</h3>
                   <p className="mt-1 text-sm text-ink/60">{order.customer.name} · {order.customer.address}</p>
                 </div>
-                <span className="rounded-full bg-mint-100 px-3 py-1 text-sm font-black text-basil">{order.status}</span>
+                <span className="rounded-full bg-rose-500/15 px-3 py-1 text-sm font-black text-basil ring-1 ring-rose-300/20">{order.status}</span>
               </div>
               <p className="mt-3 text-sm font-bold">{formatPrice(order.total)} · {order.paymentMethod === "card" ? "Bankkártya mock" : "Utánvét"}</p>
-              {order.customer.note && <p className="mt-2 rounded-button bg-white/60 p-3 text-sm text-ink/70">Megjegyzés: {order.customer.note}</p>}
+              {order.customer.note && <p className="mt-2 rounded-button bg-white/7 p-3 text-sm text-ink/70 ring-1 ring-white/10">Megjegyzés: {order.customer.note}</p>}
             </article>
           ))
         )}

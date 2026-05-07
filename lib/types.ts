@@ -1,10 +1,13 @@
 export type MenuCategory =
-  | "Desszertek"
-  | "Kávék és italok"
-  | "Classico pizzák"
-  | "Gourmet pizzák"
-  | "Előételek"
-  | "Signature pizzák";
+  | "Antipasti"
+  | "Levesek"
+  | "Főételek"
+  | "Pizzák"
+  | "Prémium pizzák"
+  | "Burgerek"
+  | "Tészták"
+  | "Gyros"
+  | "Desszertek";
 
 export type MenuItem = {
   id: string;

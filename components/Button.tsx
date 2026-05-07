@@ -10,15 +10,15 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function Button({ className = "", variant = "primary", loading, children, disabled, ...props }: ButtonProps) {
   const variants = {
-    primary: "bg-ink text-white shadow-lift hover:bg-basil",
-    secondary: "bg-white/75 text-ink ring-1 ring-mint-200 hover:bg-white",
-    ghost: "bg-transparent text-ink hover:bg-white/60",
-    danger: "bg-tomato text-white hover:bg-red-700"
+    primary: "bg-rose-600 text-white shadow-lift hover:bg-rose-500 hover:shadow-[0_18px_55px_rgba(244,63,94,0.34)]",
+    secondary: "bg-white/10 text-ink ring-1 ring-white/15 hover:bg-white/15 hover:ring-rose-400/40",
+    ghost: "bg-transparent text-ink hover:bg-white/10 hover:text-rose-200",
+    danger: "bg-rose-700 text-white hover:bg-rose-600"
   };
 
   return (
     <button
-      className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-button px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-60 ${variants[variant]} ${className}`}
+      className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-button px-4 py-2 text-sm font-semibold transition duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 ${variants[variant]} ${className}`}
       disabled={disabled || loading}
       {...props}
     >

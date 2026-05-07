@@ -20,7 +20,7 @@ export function MenuCard({ item }: { item: MenuItem }) {
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-basil">{item.category}</p>
           <h3 className="mt-2 text-xl font-black text-ink">{item.name}</h3>
         </div>
-        <span className="rounded-full bg-mint-100 px-3 py-1 text-sm font-black text-basil">{formatPrice(item.price)}</span>
+        <span className="rounded-full bg-rose-500/15 px-3 py-1 text-sm font-black text-basil ring-1 ring-rose-300/20">{formatPrice(item.price)}</span>
       </div>
       <p className="flex-1 text-sm leading-6 text-ink/70">{item.description}</p>
       <div className="mt-5 flex items-center justify-between gap-3">

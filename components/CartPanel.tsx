@@ -46,10 +46,10 @@ export function CartPanel({ open, onClose }: { open: boolean; onClose: () => voi
 
   return (
     <aside
-      className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-xl transform flex-col border-l border-white/70 bg-white/85 shadow-glass backdrop-blur-2xl transition duration-300 ${open ? "translate-x-0" : "translate-x-full"}`}
+      className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-xl transform flex-col border-l border-white/10 bg-black/80 shadow-glass backdrop-blur-2xl transition duration-300 ${open ? "translate-x-0" : "translate-x-full"}`}
       aria-hidden={!open}
     >
-      <div className="flex items-center justify-between border-b border-mint-100 p-5">
+      <div className="flex items-center justify-between border-b border-white/10 p-5">
         <div>
           <p className="text-sm font-bold text-basil">Mindig látható összeg</p>
           <h2 className="text-2xl font-black">{formatPrice(orderTotal)}</h2>
@@ -91,7 +91,7 @@ export function CartPanel({ open, onClose }: { open: boolean; onClose: () => voi
           </div>
         )}
 
-        <div className="mt-6 rounded-2xl bg-mint-50/80 p-4 text-sm">
+        <div className="mt-6 rounded-2xl bg-white/7 p-4 text-sm ring-1 ring-white/10">
           <div className="flex justify-between">
             <span>Termékek</span>
             <strong>{formatPrice(cartTotal)}</strong>
@@ -105,29 +105,29 @@ export function CartPanel({ open, onClose }: { open: boolean; onClose: () => voi
         <form className="mt-6 space-y-4" onSubmit={submit}>
           <h3 className="text-xl font-black">Fizetés</h3>
           <div className="grid gap-3">
-            <input className="rounded-button border border-mint-100 bg-white/80 px-4 py-3 outline-none focus:border-basil" placeholder="Név" value={name} onChange={(event) => setName(event.target.value)} />
-            <input className="rounded-button border border-mint-100 bg-white/80 px-4 py-3 outline-none focus:border-basil" placeholder="Cím" value={address} onChange={(event) => setAddress(event.target.value)} />
-            <input className="rounded-button border border-mint-100 bg-white/80 px-4 py-3 outline-none focus:border-basil" placeholder="Telefonszám" value={phone} onChange={(event) => setPhone(event.target.value)} />
+            <input className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Név" value={name} onChange={(event) => setName(event.target.value)} />
+            <input className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Cím" value={address} onChange={(event) => setAddress(event.target.value)} />
+            <input className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Telefonszám" value={phone} onChange={(event) => setPhone(event.target.value)} />
             <textarea
-              className="min-h-24 resize-none rounded-button border border-mint-100 bg-white/80 px-4 py-3 outline-none focus:border-basil"
+              className="min-h-24 resize-none rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10"
               placeholder="Megjegyzés a rendeléshez, pl. pizza gomba nélkül vagy kávé koffeinmentesen"
               value={note}
               onChange={(event) => setNote(event.target.value)}
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <label className={`cursor-pointer rounded-button border p-3 text-sm font-bold ${payment === "card" ? "border-basil bg-mint-100" : "border-mint-100 bg-white/70"}`}>
+            <label className={`cursor-pointer rounded-button border p-3 text-sm font-bold transition ${payment === "card" ? "border-rose-400 bg-rose-500/20 text-rose-100" : "border-white/10 bg-white/7 text-ink/70 hover:bg-white/10"}`}>
               <input className="sr-only" type="radio" checked={payment === "card"} onChange={() => setPayment("card")} />
               Bankkártya mock
             </label>
-            <label className={`cursor-pointer rounded-button border p-3 text-sm font-bold ${payment === "cod" ? "border-basil bg-mint-100" : "border-mint-100 bg-white/70"}`}>
+            <label className={`cursor-pointer rounded-button border p-3 text-sm font-bold transition ${payment === "cod" ? "border-rose-400 bg-rose-500/20 text-rose-100" : "border-white/10 bg-white/7 text-ink/70 hover:bg-white/10"}`}>
               <input className="sr-only" type="radio" checked={payment === "cod"} onChange={() => setPayment("cod")} />
               Utánvét
             </label>
           </div>
-          {error && <p className="rounded-button bg-red-50 p-3 text-sm font-bold text-red-700">{error}</p>}
+          {error && <p className="rounded-button bg-rose-500/15 p-3 text-sm font-bold text-rose-200 ring-1 ring-rose-400/25">{error}</p>}
           {success && (
-            <p className="flex items-center gap-2 rounded-button bg-mint-100 p-3 text-sm font-bold text-basil">
+            <p className="flex items-center gap-2 rounded-button bg-rose-500/15 p-3 text-sm font-bold text-rose-100 ring-1 ring-rose-400/25">
               <CheckCircle2 className="h-4 w-4" />
               {success}
             </p>

@@ -39,10 +39,10 @@ export default function AdminPage() {
           <h1 className="mt-4 text-3xl font-black">Admin belépés</h1>
           <p className="mt-2 text-sm text-ink/60">Demó hozzáférés: admin@kavandra.local / kavandra2026</p>
           <div className="mt-6 grid gap-3">
-            <input className="rounded-button border border-mint-100 bg-white/80 px-4 py-3 outline-none focus:border-basil" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)} />
-            <input className="rounded-button border border-mint-100 bg-white/80 px-4 py-3 outline-none focus:border-basil" placeholder="Jelszó" type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+            <input className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)} />
+            <input className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Jelszó" type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
           </div>
-          {error && <p className="mt-3 rounded-button bg-red-50 p-3 text-sm font-bold text-red-700">{error}</p>}
+          {error && <p className="mt-3 rounded-button bg-rose-500/15 p-3 text-sm font-bold text-rose-200 ring-1 ring-rose-400/25">{error}</p>}
           <Button className="mt-5 w-full">Belépés</Button>
         </form>
       </main>
@@ -78,7 +78,7 @@ export default function AdminPage() {
                   <div>
                     <div className="flex flex-wrap items-center gap-3">
                       <h2 className="text-2xl font-black">{order.id}</h2>
-                      <span className="rounded-full bg-mint-100 px-3 py-1 text-sm font-black text-basil">{order.status}</span>
+                      <span className="rounded-full bg-rose-500/15 px-3 py-1 text-sm font-black text-basil ring-1 ring-rose-300/20">{order.status}</span>
                     </div>
                     <div className="mt-4 grid gap-3 text-sm md:grid-cols-3">
                       <p><strong>Név:</strong> {order.customer.name}</p>
@@ -86,11 +86,11 @@ export default function AdminPage() {
                       <p><strong>Telefon:</strong> {order.customer.phone}</p>
                     </div>
                     {order.customer.note && (
-                      <p className="mt-4 rounded-2xl bg-white/60 p-4 text-sm">
+                      <p className="mt-4 rounded-2xl bg-white/7 p-4 text-sm ring-1 ring-white/10">
                         <strong>Megjegyzés:</strong> {order.customer.note}
                       </p>
                     )}
-                    <div className="mt-4 rounded-2xl bg-white/60 p-4">
+                    <div className="mt-4 rounded-2xl bg-white/7 p-4 ring-1 ring-white/10">
                       {order.items.map((item) => (
                         <div className="flex justify-between gap-3 text-sm" key={item.id}>
                           <span>{item.quantity} x {item.name}</span>
@@ -99,14 +99,14 @@ export default function AdminPage() {
                       ))}
                     </div>
                   </div>
-                  <div className="rounded-2xl bg-mint-50/80 p-4">
+                  <div className="rounded-2xl bg-white/7 p-4 ring-1 ring-white/10">
                     <p className="text-sm font-bold text-ink/60">Végösszeg</p>
                     <p className="text-3xl font-black">{formatPrice(order.total)}</p>
                     <p className="mt-2 text-sm">{order.paymentMethod === "card" ? "Bankkártya mock" : "Utánvét"}</p>
                     <label className="mt-5 block text-sm font-black" htmlFor={`status-${order.id}`}>Státusz</label>
                     <select
                       id={`status-${order.id}`}
-                      className="mt-2 w-full rounded-button border border-mint-100 bg-white px-4 py-3 outline-none focus:border-basil"
+                      className="mt-2 w-full rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition focus:border-rose-400 focus:bg-white/10"
                       value={order.status}
                       onChange={(event) => updateOrderStatus(order.id, event.target.value as OrderStatus)}
                     >
