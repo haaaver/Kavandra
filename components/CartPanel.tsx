@@ -110,7 +110,7 @@ export function CartPanel({ open, onClose }: { open: boolean; onClose: () => voi
             <input className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Telefonszám" value={phone} onChange={(event) => setPhone(event.target.value)} />
             <textarea
               className="min-h-24 resize-none rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10"
-              placeholder="Megjegyzés a rendeléshez, pl. pizza gomba nélkül vagy kávé koffeinmentesen"
+              placeholder="Megjegyzés a rendeléshez, pl. pizza gomba nélkül"
               value={note}
               onChange={(event) => setNote(event.target.value)}
             />
