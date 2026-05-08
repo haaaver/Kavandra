@@ -73,7 +73,7 @@ export function HomeApp() {
         <div>
           <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 rounded-full border border-rose-300/25 bg-white/10 px-4 py-2 text-sm font-black text-basil shadow-glass backdrop-blur-xl">
             <Sparkles className="h-4 w-4" />
-            Pizza. Kemence. Szeretet.
+            Pizza. Pasta. Grill.
           </motion.p>
           <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }} className="mt-6 max-w-4xl text-5xl font-black leading-[1.02] text-ink text-balance md:text-7xl">
             A PLACC Pizza Pasta & Grill
