@@ -32,8 +32,8 @@ http://localhost:3000
 ## Admin belépés
 
 ```text
-Email: admin@kavandra.local
-Jelszó: kavandra2026
+Email: admin@aplacc.local
+Jelszó: aplacc2026
 ```
 
 ## Környezeti változók

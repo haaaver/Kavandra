@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "Hol látható az admin felület?",
-    answer: "A /admin útvonalon. A demó belépés: admin@kavandra.local / kavandra2026."
+    answer: "A /admin útvonalon. A demó belépés: admin@aplacc.local / aplacc2026."
   }
 ];
 

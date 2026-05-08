@@ -19,7 +19,7 @@ export default function AdminPage() {
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (email === "admin@kavandra.local" && password === "kavandra2026") {
+    if (email === "admin@aplacc.local" && password === "aplacc2026") {
       setLoggedIn(true);
       setError("");
       return;
@@ -37,7 +37,7 @@ export default function AdminPage() {
           </Link>
           <Lock className="h-10 w-10 text-basil" />
           <h1 className="mt-4 text-3xl font-black">Admin belépés</h1>
-          <p className="mt-2 text-sm text-ink/60">Demó hozzáférés: admin@kavandra.local / kavandra2026</p>
+          <p className="mt-2 text-sm text-ink/60">Demó hozzáférés: admin@aplacc.local / aplacc2026</p>
           <div className="mt-6 grid gap-3">
             <input className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)} />
             <input className="rounded-button border border-white/10 bg-white/8 px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-rose-400 focus:bg-white/10" placeholder="Jelszó" type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
